@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoStreamer</title>
+<meta name="description" content="A Windows tray app that notices the game you launched, writes your stream metadata, and goes live. Twitch and YouTube.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<header>
+  <h1>AutoStreamer</h1>
+  <p class="lede">A small Windows app for people who stream the games they were going to play anyway.</p>
+</header>
+
+<p>It sits in the tray, notices when a game starts, and asks whether you want to go live. If you
+say yes, it writes the stream title, category and tags for that game, starts OBS, and posts the
+announcement once the stream is actually up. When you quit the game, it stops. You do not open a
+settings screen on the way in or the way out.</p>
+
+<h2>What it does</h2>
+
+<dl>
+  <dt>Notices the game itself</dt>
+  <dd>No timers, no polling, no scanning your running processes. It hooks the same Windows events
+      the taskbar uses, so it costs nothing while you are not playing.</dd>
+
+  <dt>Writes the metadata for you</dt>
+  <dd>Title from a template you control, the right category on each platform, and your tags. The
+      thing that actually loses you viewers is a stream called "Untitled" in the wrong category,
+      and that is the thing this removes.</dd>
+
+  <dt>Twitch and YouTube together</dt>
+  <dd>Both are first class. Connect either, or both.</dd>
+
+  <dt>Announces once you are really live</dt>
+  <dd>Never before, so nobody clicks through to an offline channel.</dd>
+
+  <dt>Stops when you stop</dt>
+  <dd>The channel does not sit there advertising a game you finished hours ago.</dd>
+</dl>
+
+<h2>What it does not do</h2>
+
+<ul>
+  <li>It does not touch the game process beyond asking Windows for its name. Nothing is injected,
+      nothing is hooked inside it, and anti-cheat has nothing to object to.</li>
+  <li>It never steals focus. No window of ours will appear over a fullscreen game.</li>
+  <li>It does not ask for your stream key, your chat, or your revenue data. It requests the
+      narrowest permission that does the job on each platform.</li>
+  <li>It sends nothing to us. There is no account, no server and no telemetry. With nothing
+      connected, it makes no network requests at all.</li>
+</ul>
+
+<footer>
+  <p><a href="privacy.html">Privacy policy</a></p>
+</footer>
+
+</main>
+</body>
+</html>
