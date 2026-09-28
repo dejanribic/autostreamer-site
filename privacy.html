@@ -52,8 +52,8 @@ and webhook URLs are deliberately excluded from every log file the application w
 
 <h2>Which third parties AutoStreamer contacts</h2>
 
-<p>Only the services you explicitly connect, and only to do the thing you connected them for. With
-nothing connected, AutoStreamer makes no network requests at all.</p>
+<p>Only the services you explicitly connect or switch on, and only to do the thing you asked for. With
+nothing connected or switched on, AutoStreamer makes no network requests at all.</p>
 
 <ul>
   <li><strong>Twitch</strong> (<code>id.twitch.tv</code>, <code>api.twitch.tv</code>): when you
@@ -66,6 +66,10 @@ nothing connected, AutoStreamer makes no network requests at all.</p>
   <li><strong>Discord</strong>: if you supply a Discord webhook URL, AutoStreamer posts a message
       announcing your stream to that one channel, and edits it afterwards to reflect that the
       stream ended.</li>
+  <li><strong>HowLongToBeat</strong> (<code>howlongtobeat.com</code>): only if you turn on the
+      "how long to beat" setting, AutoStreamer searches that site once per game, by the game's name,
+      for how long it takes to finish. Nothing about you or your channel is sent, and the answer is
+      kept on your computer so each game is only asked about once.</li>
   <li><strong>OBS Studio</strong>: over a local connection on your own machine
       (<code>127.0.0.1</code>). This never leaves your computer.</li>
 </ul>
